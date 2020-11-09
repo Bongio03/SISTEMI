@@ -17,7 +17,7 @@ void selectionSort(int v[],int n){
 lista=[88,6,49,22,99,12,1]
 print(lista)
 
-for k in range(len(lista)):
+for k in range(len(lista)-1):
     kmin=k
     for j in range(k+1,len(lista)):
         if lista[kmin] > lista[j] :
