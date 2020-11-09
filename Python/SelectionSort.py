@@ -15,18 +15,17 @@ void selectionSort(int v[],int n){
 '''
 
 lista=[88,6,49,22,99,12,1]
-kmin=0
-for elemento in enumerate(lista):
-    kmin=elemento
-    j=elemento+1
-    for j in enumerate(lista):
+print(lista)
+
+for k in range(len(lista)):
+    kmin=k
+    for j in range(k+1,len(lista)):
         if lista[kmin] > lista[j] :
             kmin=j
-    temp=0
-    if(kmin!=elemento):
-        temp=lista[elemento]
-        lista[elemento]=lista[kmin]
-        lista[kmin]=temp
+    if(kmin!=k):
+        lista[kmin] , lista[k] = lista[k] , lista[kmin]
+
+print(lista)
 
     
 
