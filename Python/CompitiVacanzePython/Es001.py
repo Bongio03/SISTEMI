@@ -4,15 +4,11 @@ qualora l'utente voglia una password semplice, o di 20 caratteri ascii qualora d
 '''
 import random
 import string
-def semplice():
-    casuale=[]
-    for elemento in range(nCaratteriSemplici): 
-        casuale.append(str(random.choice(caratteri)))
-    return("".join(casuale))
 
-def complicato():
+def generaPassword(num):
     casuale=[]
-    for elemento in range(nCaratteriComplcati): 
+    caratteri=string.ascii_letters +string.digits
+    for elemento in range(num): 
         casuale.append(str(random.choice(caratteri)))
     return("".join(casuale))
 
@@ -22,9 +18,9 @@ def main():
         scelta=input("0. Password semplice (8 caratteri)\n1. Password complicata (20 caratteri):\n")
 
     if int (scelta)==0:
-        password=semplice()
+        password=generaPassword(nCaratteriSemplici)
     else:
-        password=complicato()
+        password=generaPassword(nCaratteriComplcati)
     
     print(password)
 
@@ -32,6 +28,4 @@ if __name__== "__main__":
     password=""
     nCaratteriSemplici=8
     nCaratteriComplcati=20
-    caratteri=string.ascii_letters +string.digits
     main()
-
