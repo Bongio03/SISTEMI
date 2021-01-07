@@ -35,24 +35,3 @@ if __name__== "__main__":
     caratteri=string.ascii_letters +string.digits
     main()
 
-'''
-
-
-password=[]
-scelta=2
-while int(scelta)<0 or int(scelta)>1 : 
-    scelta=input("0. Password semplice (8 caratteri)\n1. Password complicata (20 caratteri):\n")
-
-caratteri=string.ascii_letters +string.digits
-if int (scelta)==0:
-    for elemento in range(nCaratteriSemplici): 
-        password.append(str(random.choice(caratteri)))
-        print(password)
-    print("".join(password))
-else:
-    for elemento in range(nCaratteriComplcati): 
-        password.append(str(random.choice(caratteri)))
-    print("".join(password))
-'''
-    
-
