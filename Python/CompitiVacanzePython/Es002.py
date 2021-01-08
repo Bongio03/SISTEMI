@@ -8,6 +8,7 @@ import random
 import string
 
 def genera_mac():
+    numeroCoppie=6
     estrazione=[]
     for elemento in range(numeroCoppie):
         estrazione.append(str(random.choice(string.hexdigits)))
@@ -24,5 +25,4 @@ def main():
     print(mac)
 
 if __name__== "__main__":
-    numeroCoppie=6
     main()
